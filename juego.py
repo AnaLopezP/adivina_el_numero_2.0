@@ -3,10 +3,10 @@ import random
 def menu():
     nivel_ok = False 
     while nivel_ok == False:
-        print("elija un nivel de dificultad entre 1 y 4, siendo el 1 el nivel fácil")
+        print("elija un nivel de dificultad entre 1 y 4, siendo el 1 el nivel facil")
         nivel = int(input())
         if nivel < 1 and nivel > 4:
-            print("El nivel tiene que estar entre 1 y 4, no hay más.")
+            print("El nivel tiene que estar entre 1 y 4, no hay mas.")
         else:
             nivel_ok = True
 
@@ -14,7 +14,7 @@ def menu():
 
 
 def jugar(numero, reintentos):
-    print("Intente con un número entero.")
+    print("Intente con un numero entero.")
     candidato = int(input())
     while candidato != numero and reintentos != 0:
         if candidato > numero:
