@@ -1,7 +1,5 @@
 import random
 
-
-
 def menu():
     nivel_ok = False 
     while nivel_ok == False:
@@ -13,7 +11,6 @@ def menu():
             nivel_ok = True
 
     return nivel
-
 
 
 def jugar(numero, reintentos):
@@ -55,3 +52,13 @@ def calcular_reintentos(nivel):
     elif nivel == 4:
         reintentos = 150
     return reintentos
+
+nivel = menu()
+reintentos = calcular_reintentos(nivel)
+print("Has elegido el nivel " + str(nivel) + ". Tienes " + str(reintentos) + "intentos.")
+incognita = generar_numero(nivel)
+exito = jugar(incognita, reintentos)
+if exito == True:
+    print("Has ganado.")
+else:
+    print("Game Over.")
