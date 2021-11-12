@@ -1,5 +1,7 @@
 import random
 
+
+
 def menu():
     nivel_ok = False 
     while nivel_ok == False:
@@ -40,3 +42,16 @@ def generar_numero(nivel):
         numero = random.randint(0,10000)
     elif nivel == 4:
         numero = random.randint(0,100000)
+    return numero
+
+def calcular_reintentos(nivel):
+    reintentos = 0
+    if nivel == 1:
+      reintentos = 10
+    elif nivel == 2:
+        reintentos = 50
+    elif nivel == 3:
+        reintentos = 100
+    elif nivel == 4:
+        reintentos = 150
+    return reintentos
