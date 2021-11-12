@@ -14,14 +14,16 @@ def menu():
 
 
 def jugar(numero, reintentos):
-    print("Intente con un numero entero.")
+    print("Introduzca un numero entero.")
     candidato = int(input())
-    while candidato != numero and reintentos != 0:
+    contador = 1
+    while candidato != numero and contador < reintentos :
         if candidato > numero:
             print("Te has pasado.")
         else:
             print("Te has quedado corto.")
         candidato = int(input())
+        contador = contador + 1
 
     if candidato == numero:
         return True
@@ -55,7 +57,7 @@ def calcular_reintentos(nivel):
 
 nivel = menu()
 reintentos = calcular_reintentos(nivel)
-print("Has elegido el nivel " + str(nivel) + ". Tienes " + str(reintentos) + "intentos.")
+print("Has elegido el nivel " + str(nivel) + ". Tienes " + str(reintentos) + " intentos.")
 incognita = generar_numero(nivel)
 exito = jugar(incognita, reintentos)
 if exito == True:
