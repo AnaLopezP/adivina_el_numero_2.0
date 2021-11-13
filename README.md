@@ -6,7 +6,7 @@ https://github.com/AnaLopezP/adivina_el_numero_2.0
 Hemos mejorado el juego de adivinar el numero añadiéndole niveles, puntuaciones e intentos limitados con funciones, además de un nivel especial en el que juege la máquina sola.
 El diagrama de flujo que tenemos en nuestro código es el siguiente:
 
-![diagrama de flujo adivine el número 2.0](adivina_el_numero_2_flujo.jpg)
+![diagrama de flujo adivine el número 2.0](adivina_el_numero_2_flujo.JPG)
 
 ```import random
 
