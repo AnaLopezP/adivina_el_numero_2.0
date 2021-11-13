@@ -1,5 +1,6 @@
 import random
 
+
 def menu():
     nivel_ok = False 
     while nivel_ok == False:
@@ -12,24 +13,17 @@ def menu():
 
     return nivel
 
-
 def jugar(numero, reintentos):
     print("Introduzca un numero entero.")
     candidato = int(input())
-    contador = 1
-    while candidato != numero and contador < reintentos :
+    while candidato != numero and reintentos > 1 :
         if candidato > numero:
             print("Te has pasado.")
         else:
             print("Te has quedado corto.")
         candidato = int(input())
-        contador = contador + 1
-
-    if candidato == numero:
-        return True
-    else:
-        return False
-
+        reintentos = reintentos - 1
+    return reintentos
 
 def generar_numero(nivel):
     numero = 0
@@ -55,12 +49,22 @@ def calcular_reintentos(nivel):
         reintentos = 150
     return reintentos
 
+print("Inserte su nombre")
+nombre_juagdor = str(input())
+puntuacion = 0
+tabla_resultados = []
+tabla_resultados.append(nombre_juagdor)
 nivel = menu()
 reintentos = calcular_reintentos(nivel)
-print("Has elegido el nivel " + str(nivel) + ". Tienes " + str(reintentos) + " intentos.")
+puntuacion = reintentos
+print("Has elegido el nivel " + str(nivel) + ". Tienes " + str(reintentos) + " intentos y tu puntuación máxima es " + str(puntuacion) + ". Cada reintento se resta de la puntuación.")
 incognita = generar_numero(nivel)
-exito = jugar(incognita, reintentos)
-if exito == True:
+resultado = jugar(incognita, reintentos)
+if resultado > 1:
     print("Has ganado.")
+    
 else:
     print("Game Over.")
+puntuacion = resultado - 1
+tabla_resultados.append(puntuacion)
+print(tabla_resultados)
