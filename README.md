@@ -1,6 +1,7 @@
 # adivina_el_numero_2.0
 
 Mi dirección de GitHub para este repositorio es la siquiente: [GitHub](https://github.com/AnaLopezP/adivina_el_numero_2.0)
+https://github.com/AnaLopezP/adivina_el_numero_2.0
 
 Hemos mejorado el juego de adivinar el numero añadiéndole niveles, puntuaciones e intentos limitados con funciones, además de un nivel especial en el que juege la máquina sola.
 El diagrama de flujo que tenemos en nuestro código es el siguiente:
